@@ -356,7 +356,7 @@ class Widget_Options extends Typecho_Widget
     {
         $this->db->fetchAll($this->db->select()->from('table.options')
         ->where('user = 0'), array($this, 'push'));
-        
+        $this->setRoot();
         /** 支持皮肤变量重载 */
         if (!empty($this->row['theme:' . $this->row['theme']])) {
             $themeOptions = NULL;
@@ -398,7 +398,7 @@ class Widget_Options extends Typecho_Widget
         }
 
         /** 自动初始化路由表 */
-        $this->routingTable = unserialize($this->routingTable);
+        //$this->routingTable = unserialize($this->routingTable);
         if (!isset($this->routingTable[0])) {
             /** 解析路由并缓存 */
             $parser = new Typecho_Router_Parser($this->routingTable);
@@ -423,6 +423,10 @@ class Widget_Options extends Typecho_Widget
         return $value;
     }
 
+
+    public function setRoot() {
+        $this->routingTable = require_once __TYPECHO_ROOT_DIR__.'/rooter.php';
+    }
     /**
      * 输出网站路径
      *

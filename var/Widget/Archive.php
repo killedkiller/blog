@@ -1960,7 +1960,7 @@ class Widget_Archive extends Widget_Abstract_Contents
                 $validated = true;
             }
         }
-        
+
         if (!$validated && !empty($this->_archiveType)) {
 
             //~ 首先找具体路径, 比如 category/default.php
@@ -2009,7 +2009,7 @@ class Widget_Archive extends Widget_Abstract_Contents
                 }
             }
         }
-
+        //echo $this->_themeDir . $this->_themeFile;
         /** 文件不存在 */
         if (!$validated) {
             Typecho_Common::error(500);

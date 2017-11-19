@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e96a8570-34b9-4e3b-83a4-f4e39b9a73ed" name="yun" url="http://120.79.30.174">
+        <fileTransfer host="120.79.30.174" port="22" rootFolder="/home/yoko/www/build" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

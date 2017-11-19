@@ -102,7 +102,6 @@ class Widget_Upload extends Widget_Abstract_Contents implements Widget_Interface
         $path = Typecho_Common::url(defined('__TYPECHO_UPLOAD_DIR__') ? __TYPECHO_UPLOAD_DIR__ : self::UPLOAD_DIR,
             defined('__TYPECHO_UPLOAD_ROOT_DIR__') ? __TYPECHO_UPLOAD_ROOT_DIR__ : __TYPECHO_ROOT_DIR__) 
             . '/' . $date->year . '/' . $date->month;
-
         //创建上传目录
         if (!is_dir($path)) {
             if (!self::makeUploadDir($path)) {
