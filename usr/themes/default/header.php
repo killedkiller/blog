@@ -2,6 +2,7 @@
 <!DOCTYPE HTML>
 <html class="no-js">
 <head>
+    <link rel="shortcut icon" href="./cat.svg" />
     <meta charset="<?php $this->options->charset(); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="renderer" content="webkit">
